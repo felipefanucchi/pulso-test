@@ -1,0 +1,4 @@
+# ignore layouts
+/layouts
+# ignore debug
+debug
