@@ -2,3 +2,7 @@
 /layouts
 # ignore debug
 debug.log
+# ignore vscode
+/.vscode
+# ignore sass-cache
+/.sass-cache

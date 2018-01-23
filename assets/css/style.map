@@ -1,0 +1,28 @@
+{
+	"version": 3,
+	"file": "../scss/style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../scss/_critical.scss",
+		"../scss/_helpers/_helpers.scss",
+		"../scss/_helpers/_types.scss",
+		"../scss/_helpers/_important.scss",
+		"../scss/_modules.scss",
+		"../scss/_modules/_header.scss",
+		"../scss/_modules/_footer.scss",
+		"../scss/_helpers/_print.scss"
+	],
+	"sourcesContent": [
+		"@import \"critical\";\r\n@import \"modules\";\r\n/* Non critical */\r\n@import '_helpers/print';",
+		"/* Here goes all who prints, but not the modules, all inside the helpers */\r\n@import '_helpers/helpers';\r\n@import '_helpers/types';\r\n/*\r\nIf it's necessary, import important stylesheet after all.\r\n*/\r\n@import \"_helpers/important\";",
+		"/* Helper Classes */",
+		"/* All about typography goes here. Scafold. */",
+		"/* All classes who must overwrite others. The last one when is called */",
+		"/* Goes all the modules of the project */\r\n@import '_modules/header';\r\n@import '_modules/footer';",
+		"",
+		"",
+		"@media print {\r\n    // When the user will print\r\n}"
+	],
+	"mappings": "ACAA,2EAA2E;ACA3E,oBAAoB;ACApB,8CAA8C;AFG9C;;EAEE;AGLF,wEAAwE;ACAxE,yCAAyC;ALEzC,kBAAkB",
+	"names": []
+}
