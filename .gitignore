@@ -1,4 +1,4 @@
 # ignore layouts
 /layouts
 # ignore debug
-debug
+debug.log
