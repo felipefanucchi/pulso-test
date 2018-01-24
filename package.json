@@ -6,7 +6,7 @@
   "scripts": {
     "watch:sass": "node-sass assets/scss/style.scss assets/css/style.css -w",
     "update:sass": "node-sass assets/scss/style.scss assets/css/style.css",
-    "pre-push" : "npm run update:sass"
+    "prepush" : "npm run update:sass"
   },
   "repository": {
     "type": "git",
