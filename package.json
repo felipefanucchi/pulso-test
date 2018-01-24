@@ -1,0 +1,30 @@
+{
+  "name": "teste-agencia-pulso",
+  "version": "1.0.0",
+  "description": "Este é um teste para a agência Pulso.",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass assets/scss/style.scss assets/css/style.css -w",
+    "update:sass": "node-sass assets/scss/style.scss assets/css/style.css",
+    "pre-push" : "npm run update:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipefanucchi/pulso-test.git"
+  },
+  "author": "Felipe de Lima Fanucchi <felipefanucchi2010@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felipefanucchi/pulso-test/issues"
+  },
+  "homepage": "https://github.com/felipefanucchi/pulso-test#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "node-sass": "^4.7.2"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1"
+  }
+}
