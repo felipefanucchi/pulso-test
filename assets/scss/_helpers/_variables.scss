@@ -1,12 +1,8 @@
-/*Here goes all the variables*/
+// Here goes all the variables
 
-/**
- * Variables
- */
+// Variables
 
-/**
- * Container & grid
- */  
+// Container & grid  
 $container: 970px;
 // Media Queries
 $screen-xs: 767px;
@@ -23,9 +19,7 @@ $gutter: 15px;
 $default-animation-duration: .3s;
 $fade-size:1em;
 
-/**
- * Colors
- */
+// Colors
 
 // Base
 $clear: #ffffff;
@@ -36,9 +30,7 @@ $grey: #404040;
 $color-primary: #bf2323; //RGB(191, 35, 35)
 $color-primary-light: #ef2c2c; //RGB(239, 44, 44)
 $color-secondary: #ffb820; //RGB(255, 186, 35)
-/**
- * Types
- */
+// Types
 
 $text-color: $grey;
 // Cache query string for font face

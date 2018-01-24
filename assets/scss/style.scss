@@ -1,4 +1,16 @@
+// All the modules from the project
 @import "modules";
-@import "critical";
-/* Non critical */
+
+// Here goes all who prints, but not the modules, all inside the helpers
+
+@import "_vendor/vendor";
+@import "_helpers/types";
+@import "_helpers/helpers";
+@import "_helpers/base";
+
+// If it's necessary, import important stylesheet after all.
+
+@import "_helpers/important";
+
+// Non Critical
 @import '_helpers/print';

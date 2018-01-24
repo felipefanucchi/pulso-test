@@ -1,10 +1,16 @@
 @import '../common';
 
+// Reseting the font-size,
+// Like this you can use REM like that
+// 1rem = 10px
+
 html,
 body{
     font-size: 62.5%
 }
 
-.container{
+// Container width
+// Set the container width.
+.container {
     width: $container;
 }
