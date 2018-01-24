@@ -1,11 +1,110 @@
+@charset "UTF-8";
+/* Goes all the modules of the project */
+/* Here goes all that repeat in all the others modules. But dont print any css */
+/*Here goes all the variables*/
+/**
+ * Variables
+ */
+/**
+ * Container & grid
+ */
+/**
+ * Colors
+ */
+/**
+ * Types
+ */
+/* Any kind of mixins. */
+/* Here goes all that repeat in all the others modules. But dont print any css */
+/*Here goes all the variables*/
+/**
+ * Variables
+ */
+/**
+ * Container & grid
+ */
+/**
+ * Colors
+ */
+/**
+ * Types
+ */
+/* Any kind of mixins. */
+/* Here goes all that repeat in all the others modules. But dont print any css */
+/*Here goes all the variables*/
+/**
+ * Variables
+ */
+/**
+ * Container & grid
+ */
+/**
+ * Colors
+ */
+/**
+ * Types
+ */
+/* Any kind of mixins. */
+/* line 6, C:/Users/Felipe Fanucchi/Desktop/Teste Agência Pulso/assets/scss/_modules/_logo.scss */
+.logo__figure {
+  padding: 3rem 0 20.234rem 0;
+  position: relative;
+}
+
+/* line 10, C:/Users/Felipe Fanucchi/Desktop/Teste Agência Pulso/assets/scss/_modules/_logo.scss */
+.logo__figure:before {
+  content: '';
+  width: 100%;
+  height: 293px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #bf2323;
+  transform: translateY(-70%) rotate(45deg);
+  z-index: -1;
+  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.64);
+}
+
+/* line 26, C:/Users/Felipe Fanucchi/Desktop/Teste Agência Pulso/assets/scss/_modules/_logo.scss */
+.logo__image {
+  margin: 0 auto;
+}
+
 /* Here goes all who prints, but not the modules, all inside the helpers */
-/* Helper Classes */
 /* All about typography goes here. Scafold. */
+/* Helper Classes */
+/* Here goes all that repeat in all the others modules. But dont print any css */
+/*Here goes all the variables*/
+/**
+ * Variables
+ */
+/**
+ * Container & grid
+ */
+/**
+ * Colors
+ */
+/**
+ * Types
+ */
+/* Any kind of mixins. */
+/* line 3, C:/Users/Felipe Fanucchi/Desktop/Teste Agência Pulso/assets/scss/_helpers/_base.scss */
+html,
+body {
+  font-size: 62.5%;
+}
+
+/* line 8, C:/Users/Felipe Fanucchi/Desktop/Teste Agência Pulso/assets/scss/_helpers/_base.scss */
+.container {
+  width: 970px;
+}
+
 /*
 If it's necessary, import important stylesheet after all.
 */
 /* All classes who must overwrite others. The last one when is called */
-/* Goes all the modules of the project */
 /* Non critical */
 
 /*# sourceMappingURL=../css/style.map */
