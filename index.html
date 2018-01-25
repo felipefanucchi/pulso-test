@@ -1,25 +1,64 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <title>Lorem Ipsum</title>
 </head>
 <body>
-    <div class="container">
-        <header class="header"><!-- Sticky Header -->
-            <div class="row">
-                <div class="col-xs-4">
-                    <div class="logo">
-                        <figure class="logo__figure">
-                            <img class="logo__image img-responsive" src="assets/images/logo.png" title="Logotipo" alt="Logotipo">
+    <header class="container header">
+        <div class="header__wrapper"><!-- Sticky Header -->
+            <div class="logo">
+                <a href="#" class="no-decoration">
+                    <figure class="logo__figure">
+                        <img class="logo__image img-responsive" src="assets/images/logo.png" title="Logotipo" alt="Logotipo">
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="no-padding">
+        <div class="slider">
+            <div class="slider__wrapper slider-js">
+                <div class="slider__item">
+                    <div class="slider__item--multimedia">
+                        <figure class="slider__item--figure">
+                            <img src="assets/images/banner-1.png" alt="" class="slider__item--image">
                         </figure>
+                    </div>
+                    <div class="slider__item--description">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-10 col-sm-offset-2">
+                                    <h2 class="slider__item--title">Lorem Ipsum</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item--multimedia">
+                        <figure class="slider__figure">
+                            <img src="assets/images/banner-1.png" alt="" class="slider__item--image">
+                        </figure>
+                    </div>
+                    <div class="slider__item--description">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-10 col-sm-offset-2">
+                                    <h2 class="slider__item--title">Lorem Ipsum</h2>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
-    </div>
+            <div class="slider__buttons"></div>
+        </div>
+    </section>
     <script src="assets/js/app.js"></script>
 </body>
 </html>

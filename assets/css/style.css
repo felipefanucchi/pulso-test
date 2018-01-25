@@ -1,14 +1,27 @@
 /* Goes all the modules of the project */
 /* Here goes all that repeat in all the others modules. But dont print any css */
+.header {
+  position: relative; }
+  .header__wrapper {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 1;
+    display: flex;
+    justify-content: center; }
+  @media screen and (min-width: 992px) {
+    .header__wrapper {
+      justify-content: flex-start; } }
+
 /* Here goes all that repeat in all the others modules. But dont print any css */
 /* Here goes all that repeat in all the others modules. But dont print any css */
 .logo__figure {
-  padding: 3rem 0 20.234rem 0;
+  padding: 3rem 0 8rem 0;
   position: relative; }
   .logo__figure:before {
     content: '';
     width: 100%;
-    height: 293px;
     position: absolute;
     left: 0;
     top: 0;
@@ -16,11 +29,150 @@
     right: 0;
     background: #bf2323;
     transform: translateY(-70%) rotate(45deg);
-    z-index: -1;
     box-shadow: -2px 0 15px rgba(0, 0, 0, 0.64); }
 
 .logo__image {
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
+
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 270px; }
+    .logo__figure:before {
+      height: 270px; } }
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 323px; }
+    .logo__figure:before {
+      height: 323px; } }
+
+/* Here goes all that repeat in all the others modules. But dont print any css */
+.slider {
+  position: relative; }
+  .slider__wrapper {
+    position: relative; }
+    .slider__wrapper:before, .slider__wrapper:after {
+      content: '';
+      position: absolute;
+      background: transparent;
+      width: 50%;
+      height: 0;
+      border-bottom-color: transparent;
+      border-top-color: transparent;
+      opacity: .95; }
+    .slider__wrapper:before {
+      left: 0;
+      border-left-color: #ffb820 !important;
+      border-left-width: 50vw !important;
+      border-right-color: transparent !important;
+      z-index: 1; }
+    .slider__wrapper:after {
+      right: 0;
+      border-right-color: #ffb820 !important;
+      border-right-width: 50vw !important;
+      border-left-color: transparent !important; }
+  .slider__item {
+    position: relative; }
+    .slider__item--description {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+    .slider__item--title {
+      text-transform: uppercase;
+      color: #ffffff;
+      line-height: 1;
+      font-weight: lighter;
+      max-width: 55%; }
+    .slider__item--image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .slider__buttons {
+    position: absolute;
+    max-width: 970px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    height: 64px; }
+  .slider .slick-arrow {
+    position: absolute;
+    /*Reset Style*/
+    border: none;
+    background: transparent;
+    font-size: 0;
+    padding: 0;
+    /*Styling*/
+    padding: 30px;
+    border-radius: 50%;
+    border: 2px solid #ffb820;
+    z-index: 1;
+    transition: all ease-out .3s;
+    opacity: .7; }
+    .slider .slick-arrow:focus, .slider .slick-arrow:active {
+      outline: none; }
+    .slider .slick-arrow:hover {
+      opacity: 1; }
+  .slider .slick-prev {
+    left: 0; }
+  .slider .slick-next {
+    right: 0; }
+  .slider .slick-dots {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%); }
+    .slider .slick-dots li {
+      display: inline-block;
+      opacity: .5;
+      transition: all ease-out .3s; }
+      .slider .slick-dots li.slick-active {
+        opacity: 1; }
+      .slider .slick-dots li button {
+        border-radius: 50%;
+        padding: 1rem;
+        border: none;
+        background: #ffb820;
+        font-size: 0; }
+        .slider .slick-dots li button:focus, .slider .slick-dots li button:active {
+          outline: none; }
+      .slider .slick-dots li:not(:last-child) {
+        margin-right: 2rem; }
+  @media screen and (max-width: 767px) {
+    .slider {
+      height: 90vh; }
+      .slider__item--title {
+        font-size: 6rem; }
+      .slider__wrapper:after, .slider__wrapper:before {
+        bottom: -2.5rem; }
+      .slider__wrapper:before {
+        border: 2.5rem solid transparent; }
+      .slider__wrapper:after {
+        border: 2.5rem solid transparent; } }
+  @media screen and (min-width: 768px) {
+    .slider {
+      height: 60vh; }
+      .slider__item--title {
+        font-size: 8rem; }
+      .slider__wrapper:after, .slider__wrapper:before {
+        bottom: -5rem; }
+      .slider__wrapper:before {
+        border: 5rem solid transparent; }
+      .slider__wrapper:after {
+        border: 5rem solid transparent; } }
+  @media screen and (min-width: 992px) {
+    .slider {
+      height: 70vh; }
+      .slider__item--title {
+        font-size: 13rem; }
+      .slider__item--image {
+        height: auto; } }
 
 /*
  * Bootstrap
@@ -881,7 +1033,24 @@ body {
   font-size: 62.5%; }
 
 .container {
-  width: 970px; }
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .container:before, .container:after {
+    content: " ";
+    display: table; }
+  .container:after {
+    clear: both; }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 970px; } }
 
 .clearfix:before, .clearfix:after {
   content: " ";
@@ -1171,10 +1340,42 @@ body {
 .slick-arrow.slick-hidden {
   display: none; }
 
+@media screen and (max-width: 767px) {
+  .flex-center-xs {
+    display: flex;
+    justify-content: center; } }
+
+@media screen and (min-width: 768px) {
+  height: 60vh; }
+
+@media screen and (min-width: 992px) {
+  height: 70vh;
+  __item--title {
+    font-size: 13rem; }
+  __item--image {
+    height: auto; } }
+
 /* Here goes all that repeat in all the others modules. But dont print any css */
 html,
 body {
   font-size: 62.5%; }
 
 .container {
-  width: 970px; }
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .container:before, .container:after {
+    content: " ";
+    display: table; }
+  .container:after {
+    clear: both; }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 970px; } }

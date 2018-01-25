@@ -1,1 +1,28 @@
 @import '../common';
+.header{
+    $this: &;
+    position: relative;
+
+    &__wrapper{
+        position: absolute;
+        left:0;
+        width: 100%;
+        pointer-events: none;
+        z-index: 1;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: $screen-xs) {}
+
+    @media screen and (min-width: $screen-sm) {}
+
+    @media screen and (min-width: $screen-md) {
+        &__wrapper{
+            justify-content: flex-start;
+        }
+    }
+
+    @media screen and (min-width: $screen-lg) {}
+}

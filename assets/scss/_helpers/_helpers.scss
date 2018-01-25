@@ -1,1 +1,26 @@
 // Helper Classes 
+
+@media screen and (max-width: $screen-xs) {
+    .flex-center-xs {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: $screen-sm) {
+    height: 60vh;
+}
+
+@media screen and (min-width: $screen-md) {
+    height: 70vh;
+    &__item {
+        &--title {
+            font-size: 13rem;
+        }
+        &--image {
+            height: auto;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-lg) {}

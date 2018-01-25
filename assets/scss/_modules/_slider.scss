@@ -1,0 +1,218 @@
+@import '../common';
+.slider {
+    $this: &;
+    position: relative;
+    
+    &__wrapper{
+        position: relative;
+        &:before,
+        &:after{
+            content: '';
+            position: absolute;
+            background: transparent;
+            width: 50%;
+            height: 0;
+            border-bottom-color: transparent;
+            border-top-color: transparent;
+            opacity: .95;
+        }
+
+        &:before{
+            left: 0;
+            border-left-color: $color-secondary !important;
+            border-left-width: 50vw !important;
+            border-right-color: transparent !important;
+            z-index: 1;
+        }
+
+        &:after{
+            right: 0;
+            border-right-color:$color-secondary !important;
+            border-right-width: 50vw !important;
+            border-left-color: transparent !important;
+        }
+    }
+
+    &__item{
+        position: relative;
+
+        &--description{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        &--title{
+            text-transform: uppercase;
+            color: $clear;
+            line-height: 1;
+            font-weight: lighter;
+            max-width: 55%;
+        }
+
+        &--multimedia{
+
+        }
+
+        &--image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &--title{
+
+        }
+
+        &--image{
+
+        }
+
+        &--figure{
+
+        }
+    }
+
+    &__buttons{
+        position: absolute;
+        max-width: $container;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0 auto;
+        height: 64px;
+    }
+
+    // Overwrite in slick css
+    .slick{
+        &-arrow{
+            position: absolute;
+            /*Reset Style*/
+            border:none;
+            background: transparent;
+            font-size: 0;
+            padding:0;
+            /*Styling*/
+            padding:30px;
+            border-radius:50%;
+            border: 2px solid $color-secondary;
+            z-index: 1;
+            @include ani;
+            opacity: .7;
+
+            &:focus,
+            &:active{
+                outline: none;
+            }
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+        &-prev{
+            left:0;
+        }
+
+        &-next{
+            right:0;
+        }
+
+        //Dots
+        &-dots{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: $gutter;
+            left: 50%;
+            transform: translateX(-50%);
+
+            li{
+                display: inline-block;
+                opacity: .5;
+                @include ani;
+
+                &.slick-active{
+                    opacity: 1;
+                }
+                
+                button{
+                    border-radius: 50%;
+                    padding: 1rem;
+                    border: none;
+                    background: $color-secondary;
+                    font-size: 0;
+
+                    &:focus,
+                    &:active{
+                        outline: none;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-right: 2rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $screen-xs) {
+        height: 90vh;
+        &__item {
+            &--title {
+                font-size: 6rem;
+            }
+        }
+
+        &__wrapper {
+            &:after,
+            &:before {
+                bottom: -2.5rem;
+            }
+
+            &:before {
+                border: 2.5rem solid transparent;
+            }
+            &:after {
+                border: 2.5rem solid transparent;
+            }
+        }
+    }
+    @media screen and (min-width: $screen-sm) {
+        height: 60vh;
+
+        &__item{
+            &--title{
+                font-size: 8rem;
+            }
+        }
+
+        &__wrapper {
+            &:after,
+            &:before {
+                bottom: -5rem;
+            }
+            &:before {
+                border: 5rem solid transparent;
+            }
+            &:after {
+                border: 5rem solid transparent;
+            }
+        }
+    }
+    @media screen and (min-width: $screen-md) {
+        height: 70vh;
+        &__item {
+            &--title {
+                font-size: 13rem;
+            }
+
+            &--image{
+                height: auto;
+            }
+        }
+    }
+    @media screen and (min-width: $screen-lg) {}
+}

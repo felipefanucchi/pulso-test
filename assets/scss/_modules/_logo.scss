@@ -1,41 +1,51 @@
 @import '../common';
-
+// Local Variables
+$logo-size-sm: 323px;
+$logo-size-xs: 270px;
 .logo{
     $this: &;
 
     &__figure{
-        padding: 3rem 0 20.234rem 0;
+        padding: 3rem 0 8rem 0;
         position: relative;
 
         &:before {
             content: '';
             width: 100%;
-            height: 293px;
             position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                right:0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right:0;
             background: $color-primary;
             transform: translateY(-70%) rotate(45deg);
-            z-index: -1;
             box-shadow: -2px 0 15px rgba($dark, .64);
         }
     }
 
     &__image{
         margin: 0 auto;
+        position: relative;
     }
 
     @media screen and (max-width: $screen-xs) {
-
+        width:$logo-size-xs;
+        &__figure {
+            &:before {
+                height: $logo-size-xs;
+            }
+        }
     }
 
     @media screen and (min-width: $screen-sm) {
-
+        width:$logo-size-sm;
+        &__figure {
+            &:before {
+                height: $logo-size-sm;
+            }
+        }
     }
     @media screen and (min-width: $screen-md) {
-
     }
     @media screen and (min-width: $screen-lg) {
 
