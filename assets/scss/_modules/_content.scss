@@ -1,0 +1,51 @@
+@import '../common';
+//Local variables
+
+//Placeholder for this module
+%heading{
+    color:$color-primary;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0;
+    margin-bottom: $gutter*2;
+    padding-bottom: 1.5rem;
+    display: inline-block;
+
+    &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 9px;
+        width: 70%;
+        background: currentColor;
+        color: inherit;
+    }
+}
+
+.content {
+    $this: &;
+
+    @each $key, $value in $font-size-headings {
+        #{$key}{
+            @extend %heading !optional;
+            font-size: $value;
+        }
+    }
+
+    p{
+        font-size: $font-size-base;
+        color: $grey;
+        margin-bottom: $gutter*2;
+    }
+
+    @media screen and (max-width: $screen-xs) {
+        p{
+            line-height: 1.4;
+        }
+    }
+    @media screen and (min-width: $screen-sm) {}
+    @media screen and (min-width: $screen-md) {}
+    @media screen and (min-width: $screen-lg) {}
+}

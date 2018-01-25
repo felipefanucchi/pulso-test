@@ -10,17 +10,25 @@
 </head>
 <body>
     <header class="container header">
-        <div class="header__wrapper"><!-- Sticky Header -->
+        <div class="header__wrapper header__wrapper-js"><!-- Sticky Header -->
             <div class="logo">
                 <a href="#" class="no-decoration">
-                    <figure class="logo__figure">
+                    <div class="logo__svg">
                         <img class="logo__image img-responsive" src="assets/images/logo.png" title="Logotipo" alt="Logotipo">
-                    </figure>
+                    </div>
+                    <!-- SVG Logo-->
+                    <svg class="clip-svg">
+                        <defs>
+                            <clipPath id="logo-mask" clipPathUnits="objectBoundingBox">
+                                <polygon points="0 0, 0 0, 1 0, 0.5 0.7" />
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </a>
             </div>
         </div>
     </header>
-    <section class="no-padding">
+    <section class="section section--bottom--big section--top section--grey-light">
         <div class="slider">
             <div class="slider__wrapper slider-js">
                 <div class="slider__item">
@@ -57,6 +65,85 @@
                 </div>
             </div>
             <div class="slider__buttons"></div>
+        </div>
+    </section>
+    <section class="section section--grey-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="content">
+                        <h2>Lorem Ipsum</h2>
+                        <p>
+                            <strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo maxime obcaecati velit magni! Et dolores nisi
+                                culpa modi nostrum facere ad optio sint obcaecati hic! Magni neque dicta non animi voluptatum eveniet, qui quia
+                                saepe eaque quod nesciunt perspiciatis facilis in sed ea vitae! Tempore fugiat dolorum at, ex tempora numquam
+                                voluptatem autem inventore commodi, esse explicabo alias veritatis earum laborum. Modi minima culpa dolore maiores
+                                ad veritatis nisi esse, impedit cupiditate laudantium? Minima nihil, facere soluta eveniet ipsam accusantium
+                                a laudantium nisi, dicta reiciendis explicabo fuga magnam eius numquam eos. Ratione quam recusandae, libero ut
+                                fugit sequi delectus nam.
+                            </strong>
+                        </p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia est repellat, blanditiis quisquam officiis quae neque
+                            corporis inventore perferendis enim quas ex quam quidem voluptatibus alias nisi nostrum voluptate! Blanditiis nesciunt,
+                            non beatae aliquid fugiat dicta error praesentium explicabo ullam? Praesentium eum rem maiores odio ratione reprehenderit
+                            consequatur excepturi est?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section--primary section--background section--background-js" data-image="assets/images/banner-middle.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="card-primary card-primary--widescreen">
+                        <div class="card-primary__multimedia">
+                            <figure class="card-primary__figure">
+                                <img src="assets/images/table-food.png" alt="Imagem do card." class="card-primary__image">
+                            </figure>
+                        </div>
+                        <div class="card-primary__meta">
+                            <h4 class="card-primary__title">Lorem Ipsum</h4>  
+                            <p class="card-primary__excerpt">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sint vitae, expedita reiciendis suscipit minus ma/gnam unde
+                                ut possimus aperiam ex quidem ratione nihil, blanditiis cum. Eos libero porro quis hic, ipsa ab omnis repudiandae aperiam
+                                ducimus, dolor quo consequuntur culpa et cumque vel harum?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section--grey-light overflow-hidden">
+        <div class="container">
+            <div class="card-secondary">
+                <div class="card-secondary__multimedia">
+                    <figure class="card-secondary__figure">
+                        <img src="assets/images/foods.png" alt="Imagem do card." class="card-secondary__image img-responsive">
+                    </figure>
+                </div>
+                <div class="card-secondary__meta">
+                    <h4 class="card-secondary__title">Lorem Ipsum</h4>
+                    <p class="card-secondary__excerpt">
+                        <strong>
+                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sint vitae, expedita reiciendis suscipit minus magnam unde
+                            ut possimus aperiam ex quidem ratione nihil, blanditiis cum. Eos libero porro quis hic, ipsa ab omnis repudiandae aperiam
+                            ducimus, dolor quo consequuntur culpa et cumque vel harum?
+                        </strong>
+                    </p>
+                    <p class="card-secondary__excerpt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sint vitae, expedita reiciendis suscipit minus magnam unde
+                        ut possimus aperiam ex quidem ratione nihil, blanditiis cum. Eos libero porro quis hic, ipsa ab omnis repudiandae
+                        aperiam ducimus, dolor quo consequuntur culpa et cumque vel harum?
+                    </p>
+                    <p class="card-secondary__excerpt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sint vitae, expedita reiciendis suscipit minus magnam unde
+                        ut possimus aperiam ex quidem ratione nihil, blanditiis cum. Eos libero porro quis hic, ipsa ab omnis repudiandae
+                        aperiam ducimus, dolor quo consequuntur culpa et cumque vel harum?
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
     <script src="assets/js/app.js"></script>

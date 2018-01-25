@@ -1,4 +1,16 @@
 @import '../common';
+
+// Local Keyframes
+@keyframes svg-ani {
+    0% {
+        opacity: 0;
+        transform: translateY(-5rem)
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .header{
     $this: &;
     position: relative;
@@ -9,18 +21,46 @@
         width: 100%;
         pointer-events: none;
         z-index: 1;
-
         display: flex;
         justify-content: center;
     }
 
-    @media screen and (max-width: $screen-xs) {}
+    // Sticky header
+    &__sticky{
+        #{$this}{
+            &__wrapper{
+                position: fixed;
+                top: 0;
+                z-index: 3;
+                left: 0;
+            }
+        }
+
+        .logo{
+            &__svg{
+                animation: svg-ani .3s ease;
+                transform: scale(.7) translateY(-4.3rem);
+            }
+        }
+    }
+
+    @media screen and (max-width: $screen-xs) {
+
+    }
 
     @media screen and (min-width: $screen-sm) {}
 
     @media screen and (min-width: $screen-md) {
         &__wrapper{
             justify-content: flex-start;
+        }
+
+        &__sticky {
+            #{$this} {
+                &__wrapper {
+                    left: initial;
+                }
+            }
         }
     }
 

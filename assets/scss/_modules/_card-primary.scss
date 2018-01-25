@@ -1,0 +1,64 @@
+@import '../common';
+.card-primary {
+    $this: &;
+    display: flex;
+
+    &__meta {
+        background-color: $clear;
+    }
+
+    &__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: $font-size-h4;
+        color: $color-primary;
+        margin-bottom: $gutter*2;
+        margin-top: 0;
+    }
+
+    &__multimedia {
+        background: $color-primary;
+        position: relative;
+    }
+
+    &__excerpt {
+        color: $grey;
+        font-size: $font-size-base;
+    }
+
+    &--widescreen {
+        #{$this} {
+            &__figure {
+                padding-bottom: 75%;
+            }
+            // Refers to .card
+        }
+    }
+
+    @media screen and (max-width: $screen-xs) {
+        flex-direction: column;
+        &__meta {
+            padding: $gutter;
+        }
+        &__excerpt {
+            line-height: 1.4;
+        }
+    }
+    @media screen and (min-width: $screen-sm) {
+        flex-direction: row;
+        &__multimedia {
+            flex: 1 1 45%;
+        }
+        &__meta {
+            flex: 1 1 55%;
+            padding: $gutter*2;
+        }
+    }
+    @media screen and (min-width: $screen-md) {}
+    @media screen and (min-width: $screen-lg) {}
+}

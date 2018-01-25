@@ -1,5 +1,14 @@
 /* Goes all the modules of the project */
 /* Here goes all that repeat in all the others modules. But dont print any css */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i,800");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i,800");
+@keyframes svg-ani {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem); }
+  100% {
+    opacity: 1; } }
+
 .header {
   position: relative; }
   .header__wrapper {
@@ -10,26 +19,30 @@
     z-index: 1;
     display: flex;
     justify-content: center; }
+  .header__sticky .header__wrapper {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    left: 0; }
+  .header__sticky .logo__svg {
+    animation: svg-ani .3s ease;
+    transform: scale(0.7) translateY(-4.3rem); }
   @media screen and (min-width: 992px) {
     .header__wrapper {
-      justify-content: flex-start; } }
+      justify-content: flex-start; }
+    .header__sticky .header__wrapper {
+      left: initial; } }
 
 /* Here goes all that repeat in all the others modules. But dont print any css */
-/* Here goes all that repeat in all the others modules. But dont print any css */
-.logo__figure {
-  padding: 3rem 0 8rem 0;
-  position: relative; }
-  .logo__figure:before {
-    content: '';
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: #bf2323;
-    transform: translateY(-70%) rotate(45deg);
-    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.64); }
+.logo .clip-svg {
+  width: 0;
+  height: 0; }
+
+.logo__svg {
+  padding: 3rem 0 10rem 0;
+  clip-path: url("#logo-mask");
+  background: #bf2323;
+  transition: all ease-out .3s; }
 
 .logo__image {
   margin: 0 auto;
@@ -60,7 +73,7 @@
       height: 0;
       border-bottom-color: transparent;
       border-top-color: transparent;
-      opacity: .95; }
+      border-image: url("assets/images/bg-cone-slide.png"); }
     .slider__wrapper:before {
       left: 0;
       border-left-color: #ffb820 !important;
@@ -85,6 +98,10 @@
       line-height: 1;
       font-weight: lighter;
       max-width: 55%; }
+    .slider__item--multimedia {
+      height: 100%; }
+    .slider__item--figure {
+      height: 100%; }
     .slider__item--image {
       width: 100%;
       height: 100%;
@@ -111,21 +128,25 @@
     border: 2px solid #ffb820;
     z-index: 1;
     transition: all ease-out .3s;
-    opacity: .7; }
+    opacity: .7;
+    background-repeat: no-repeat;
+    background-position: center center; }
     .slider .slick-arrow:focus, .slider .slick-arrow:active {
       outline: none; }
     .slider .slick-arrow:hover {
       opacity: 1; }
   .slider .slick-prev {
-    left: 0; }
+    left: 0;
+    background-image: url("../images/arrow-left.png"); }
   .slider .slick-next {
-    right: 0; }
+    right: 0;
+    background-image: url("../images/arrow-right.png"); }
   .slider .slick-dots {
     list-style: none;
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: 15px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%); }
     .slider .slick-dots li {
@@ -170,9 +191,187 @@
     .slider {
       height: 70vh; }
       .slider__item--title {
-        font-size: 13rem; }
-      .slider__item--image {
-        height: auto; } }
+        font-size: 13rem; } }
+
+/* Here goes all that repeat in all the others modules. But dont print any css */
+.section {
+  padding: 90px 0; }
+  .section--bottom {
+    padding-bottom: 0; }
+  .section--top {
+    padding-top: 0; }
+  .section--primary {
+    background: rgba(191, 35, 35, 0.9); }
+  .section--grey-light {
+    background: #f3f3f3; }
+  .section--background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  @media screen and (max-width: 767px) {
+    .section__top--big {
+      padding-top: 70px; }
+    .section__top--huge {
+      padding-top: 90px; }
+    .section__bottom--big {
+      padding-bottom: 70px; }
+    .section__bottom--huge {
+      padding-bottom: 90px; } }
+  @media screen and (min-width: 768px) {
+    .section__top--big {
+      padding-top: 90px; }
+    .section__top--huge {
+      padding-top: 110px; }
+    .section__bottom--big {
+      padding-bottom: 90px; }
+    .section__bottom--huge {
+      padding-bottom: 110px; } }
+  @media screen and (min-width: 992px) {
+    .section__top--big {
+      padding-top: 120px; }
+    .section__top--huge {
+      padding-top: 150px; }
+    .section__bottom--big {
+      padding-bottom: 120px; }
+    .section__bottom--huge {
+      padding-bottom: 150px; } }
+
+/* Here goes all that repeat in all the others modules. But dont print any css */
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  color: #bf2323;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-bottom: 1.5rem;
+  display: inline-block; }
+  .content h1:after, .content h2:after, .content h3:after, .content h4:after, .content h5:after, .content h6:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 9px;
+    width: 70%;
+    background: currentColor;
+    color: inherit; }
+
+.content h1 {
+  font-size: 4.2rem; }
+
+.content h2 {
+  font-size: 3rem; }
+
+.content h3 {
+  font-size: 2.4rem; }
+
+.content h4 {
+  font-size: 2.2rem; }
+
+.content h5 {
+  font-size: 1.8rem; }
+
+.content h6 {
+  font-size: 1.2rem; }
+
+.content p {
+  font-size: 1.6rem;
+  color: #404040;
+  margin-bottom: 30px; }
+
+@media screen and (max-width: 767px) {
+  .content p {
+    line-height: 1.4; } }
+
+/* Here goes all that repeat in all the others modules. But dont print any css */
+.card-primary {
+  display: flex; }
+  .card-primary__meta {
+    background-color: #ffffff; }
+  .card-primary__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .card-primary__title {
+    font-size: 2.2rem;
+    color: #bf2323;
+    margin-bottom: 30px;
+    margin-top: 0; }
+  .card-primary__multimedia {
+    background: #bf2323;
+    position: relative; }
+  .card-primary__excerpt {
+    color: #404040;
+    font-size: 1.6rem; }
+  .card-primary--widescreen .card-primary__figure {
+    padding-bottom: 75%; }
+  @media screen and (max-width: 767px) {
+    .card-primary {
+      flex-direction: column; }
+      .card-primary__meta {
+        padding: 15px; }
+      .card-primary__excerpt {
+        line-height: 1.4; } }
+  @media screen and (min-width: 768px) {
+    .card-primary {
+      flex-direction: row; }
+      .card-primary__multimedia {
+        flex: 1 1 45%; }
+      .card-primary__meta {
+        flex: 1 1 55%;
+        padding: 30px; } }
+
+/* Here goes all that repeat in all the others modules. But dont print any css */
+.card-secondary {
+  position: relative;
+  background: linear-gradient(to top, #ffffff 80%, #e6e6e6 100%); }
+  .card-secondary__multimedia {
+    position: absolute;
+    transform: rotate(90deg);
+    right: 0;
+    left: 0;
+    bottom: calc( 100% - (560px / 1.5)); }
+  .card-secondary__title {
+    font-size: 4.2rem;
+    color: #ffb820;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 1.5rem;
+    display: inline-block; }
+    .card-secondary__title:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 9px;
+      width: 50%;
+      background: currentColor;
+      color: inherit; }
+  .card-secondary__meta {
+    padding: 25rem 15px 5rem; }
+  .card-secondary__figure {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto; }
+  .card-secondary__excerpt {
+    color: #404040;
+    font-size: 1.6rem; }
+  @media screen and (min-width: 992px) {
+    .card-secondary {
+      background: linear-gradient(to left, #ffffff 60%, #cccccc); }
+      .card-secondary__meta {
+        padding: 9rem 6.5rem 13rem 35rem; }
+      .card-secondary__multimedia {
+        position: absolute;
+        left: -13rem;
+        top: -5rem;
+        transform: rotate(0) translateX(0);
+        right: initial;
+        bottom: initial; }
+      .card-secondary__figure {
+        max-width: 100%; } }
 
 /*
  * Bootstrap
@@ -426,9 +625,9 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "PT Sans", sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.5;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.42857;
   color: #404040;
   background-color: #fff; }
 
@@ -466,7 +665,7 @@ img {
 
 .img-thumbnail {
   padding: 4px;
-  line-height: 1.5;
+  line-height: 1.42857;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -481,8 +680,8 @@ img {
   border-radius: 50%; }
 
 hr {
-  margin-top: 1.5;
-  margin-bottom: 1.5;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eeeeee; }
 
@@ -1030,7 +1229,8 @@ hr {
 /* Here goes all that repeat in all the others modules. But dont print any css */
 html,
 body {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-family: "Open sans", sans-serif; }
 
 .container {
   margin-right: auto;
@@ -1340,6 +1540,9 @@ body {
 .slick-arrow.slick-hidden {
   display: none; }
 
+.overflow-hidden {
+  overflow: hidden; }
+
 @media screen and (max-width: 767px) {
   .flex-center-xs {
     display: flex;
@@ -1358,7 +1561,8 @@ body {
 /* Here goes all that repeat in all the others modules. But dont print any css */
 html,
 body {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-family: "Open sans", sans-serif; }
 
 .container {
   margin-right: auto;

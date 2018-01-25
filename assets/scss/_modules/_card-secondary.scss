@@ -1,0 +1,79 @@
+@import '../common';
+.card-secondary {
+    $this: &;
+    position: relative;
+
+    background: linear-gradient(to top, $clear 80%, lighten($dark, 90%) 100%);
+
+    &__multimedia {
+        position: absolute;
+        transform: rotate(90deg);
+        right:0; 
+        left: 0;
+        bottom: calc( 100% - (560px / 1.5));
+    }
+
+    &__title {
+        font-size: $font-size-h1;
+        color: $color-secondary;
+        margin-top: 0;
+
+        position: relative;
+        margin-bottom: $gutter;
+        padding-bottom: 1.5rem;
+        display: inline-block;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 9px;
+            width: 50%;
+            background: currentColor;
+            color: inherit;
+        }
+    }
+    &__meta {
+        padding: 25rem $gutter 5rem;
+    }
+
+    &__figure{
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__excerpt {
+        color: $grey;
+        font-size: $font-size-base;
+    }
+    @media screen and (max-width: $screen-xs) {
+        
+
+    }
+    @media screen and (min-width: $screen-sm) {
+
+    }
+    @media screen and (min-width: $screen-md) {
+        background: linear-gradient(to left, $clear 60%, lighten($dark, 80%));
+        &__meta {
+            padding: 9rem 6.5rem 13rem 35rem;
+        }
+
+        &__multimedia {
+            position: absolute;
+            left: -13rem;
+            top: -5rem;
+
+            transform: rotate(0) translateX(0);
+            right: initial;
+            bottom: initial;
+        }
+
+        &__figure {
+            max-width: 100%;
+        }
+
+    }
+    @media screen and (min-width: $screen-lg) {}
+}

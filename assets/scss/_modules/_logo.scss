@@ -2,25 +2,19 @@
 // Local Variables
 $logo-size-sm: 323px;
 $logo-size-xs: 270px;
+
 .logo{
     $this: &;
+    .clip-svg {
+        width: 0;
+        height: 0;
+    }
 
-    &__figure{
-        padding: 3rem 0 8rem 0;
-        position: relative;
-
-        &:before {
-            content: '';
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            right:0;
-            background: $color-primary;
-            transform: translateY(-70%) rotate(45deg);
-            box-shadow: -2px 0 15px rgba($dark, .64);
-        }
+    &__svg {
+        padding: 3rem 0 10rem 0;
+        clip-path: url("#logo-mask");
+        background: $color-primary;
+        @include ani; // Same animation as the Keyframe.
     }
 
     &__image{

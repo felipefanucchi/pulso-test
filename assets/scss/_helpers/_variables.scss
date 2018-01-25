@@ -11,13 +11,6 @@ $screen-md: 992px;
 $screen-lg: 1200px;
 // Gutter
 $gutter: 15px;
-// Paths
-// $assets-path: '../' !default;
-// $font-path: $assets-path+'fonts/' !default;
-// $img-path: $assets-path+'images/' !default;
-// Transitions
-$default-animation-duration: .3s;
-$fade-size:1em;
 
 // Colors
 
@@ -26,6 +19,7 @@ $clear: #ffffff;
 $dark: #000000;
 // Shadows
 $grey: #404040;
+$grey-light: #f3f3f3;
 // Brand colors
 $color-primary: #bf2323; //RGB(191, 35, 35)
 $color-primary-light: #ef2c2c; //RGB(239, 44, 44)
@@ -36,47 +30,27 @@ $text-color: $grey;
 // Cache query string for font face
 $font-cache: fd5a9b;
 // Families
-$font-family-primary: 'Roboto',
+$font-family-primary: 'Open sans',
 sans-serif;
-$font-family-secondary: 'PT Sans',
-sans-serif;
-$font-family-sans-serif: $font-family-primary;
-$font-family-headings: $font-family-primary;
-$font-family-base: $font-family-secondary;
-$font-family-content: $font-family-secondary;
-// Weights
-$font-weight-thin: 100;
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-bold: 700;
-$font-weight-black: 900;
 // Sizes
 // Base and content font sizes
-$font-size-xs: 1rem;
 $font-size-sm: 1.2rem;
-$font-size-base: 1.4rem;
-$font-size-md: 1.6rem;
+$font-size-base: 1.6rem;
+$font-size-md: 1.8rem;
 $font-size-lg: 2.0rem;
 $font-size-xlg: 2.2rem;
-$font-size-xxlg: 5rem;
 // Headings font sizes
+$font-size-headings :(
+    h1: $font-size-h1,
+    h2: $font-size-h2,
+    h3: $font-size-h3,
+    h4: $font-size-h4,
+    h5: $font-size-h5,
+    h6: $font-size-h6
+);
 $font-size-h1: 4.2rem;
 $font-size-h2: 3.0rem;
 $font-size-h3: 2.4rem;
 $font-size-h4: $font-size-xlg;
 $font-size-h5: $font-size-md;
 $font-size-h6: $font-size-sm;
-// Line heights
-$line-heights: ('xs', 'sm', 'md', 'lg');
-$line-height-xs: 1.1;
-$line-height-sm: 1.2;
-$line-height-md: 1.5;
-$line-height-lg: 1.6;
-$line-height-base: $line-height-md;
-$line-height-computed: $line-height-md;
-// Letter spacings
-$letter-spacings: ('condensed', 'xs', 'lg');
-$letter-spacing-condensed: -.025em;
-$letter-spacing-xs: .05em;
-$letter-spacing-lg: .15em;
