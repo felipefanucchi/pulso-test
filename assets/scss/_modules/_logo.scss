@@ -13,6 +13,7 @@ $logo-size-xs: 270px;
     &__svg {
         padding: 3rem 0 10rem 0;
         clip-path: url("#logo-mask");
+        -webkit-clip-path: url("#logo-mask");
         background: $color-primary;
         @include ani; // Same animation as the Keyframe.
     }

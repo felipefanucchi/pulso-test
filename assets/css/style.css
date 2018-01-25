@@ -41,6 +41,7 @@
 .logo__svg {
   padding: 3rem 0 10rem 0;
   clip-path: url("#logo-mask");
+  -webkit-clip-path: url("#logo-mask");
   background: #bf2323;
   transition: all ease-out .3s; }
 
